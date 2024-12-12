@@ -1,55 +1,49 @@
-/* Resetando os estilos padrões */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-  
-  /* Corpo da página */
   body {
     font-family: Arial, sans-serif;
-    background-color: #1C1C1C;
-    color: #333;
+    background-color: #708090;
+    color: white;
     padding: 20px;
 }
-  
-  /* Contêiner principal dos filmes */
+  .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+  }
   .movie-container {
     display: flex;
     flex-wrap: wrap;
     gap: 70px;
     justify-content: center;
 }
-  
-  /* Cartão de cada filme */
   .movie-card {
-    background-color: white;
+    background-color: black;
     width: 300px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
 }
-  
   .movie-card:hover {
     transform: scale(1.05);
 }
-  
-  /* Imagem do filme */
   .movie-card img {
     width: 100%;
     height: 450px;
     object-fit: cover;
 }
-  
-  /* Informações do filme */
   .movie-info {
     padding: 15px;
 }
   
   .movie-info h2 {
     font-size: 1.5rem;
-    color: #333;
+    color: #FFFFE0;
     margin-bottom: 10px;
 }
   
@@ -59,5 +53,5 @@
 }
   
   .movie-info strong {
-    color: #555;
+    color: #FFFFE0;
 }  

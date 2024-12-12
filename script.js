@@ -1204,50 +1204,38 @@ const filmes = [
       return;
     }
   
-    // Percorre a lista de filmes e cria um card para cada um
     filmes.forEach(filme => {
-      // Cria o card de filme
       const movieCard = document.createElement('div');
       movieCard.classList.add('movie-card');
       
-      // Cria a imagem do filme
       const movieImg = document.createElement('img');
       movieImg.src = filme.posterUrl;
       movieImg.alt = filme.title;
       
-      // Cria a área de informações do filme
       const movieInfo = document.createElement('div');
       movieInfo.classList.add('movie-info');
       
-      // Cria e adiciona o título
       const title = document.createElement('h2');
       title.textContent = filme.title;
       
-      // Cria e adiciona o ano
       const year = document.createElement('p');
       year.innerHTML = `<strong>Ano:</strong> ${filme.year}`;
       
-      // Cria e adiciona a duração
       const runtime = document.createElement('p');
       runtime.innerHTML = `<strong>Duração:</strong> ${filme.runtime} minutos`;
       
-      // Cria e adiciona os gêneros
       const genres = document.createElement('p');
       genres.innerHTML = `<strong>Gêneros:</strong> ${filme.genres.join(', ')}`;
       
-      // Cria e adiciona o diretor
       const director = document.createElement('p');
       director.innerHTML = `<strong>Diretor:</strong> ${filme.director}`;
       
-      // Cria e adiciona os atores
       const actors = document.createElement('p');
       actors.innerHTML = `<strong>Atores:</strong> ${filme.actors}`;
       
-      // Cria e adiciona a sinopse
       const plot = document.createElement('p');
       plot.innerHTML = `<strong>Sinopse:</strong> ${filme.plot}`;
       
-      // Adiciona as informações no card
       movieInfo.appendChild(title);
       movieInfo.appendChild(year);
       movieInfo.appendChild(runtime);
@@ -1255,16 +1243,12 @@ const filmes = [
       movieInfo.appendChild(director);
       movieInfo.appendChild(actors);
       movieInfo.appendChild(plot);
-      
-      // Adiciona a imagem e as informações no card
       movieCard.appendChild(movieImg);
       movieCard.appendChild(movieInfo);
       
-      // Adiciona o card ao contêiner
       container.appendChild(movieCard);
     });
   };
-  
-  // Chama a função para gerar os cards
+
   createMovieCards();
   
